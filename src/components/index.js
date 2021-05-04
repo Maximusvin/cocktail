@@ -1,2 +1,4 @@
 export { default as App } from './App';
-// export { Header } from './Header';
+export { Bar } from './Bar';
+export { NavBar } from './NavBar';
+export { Ingredients } from './Ingredients';
