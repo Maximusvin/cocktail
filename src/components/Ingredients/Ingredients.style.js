@@ -1,12 +1,32 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  padding-top: 100px;
+  padding: 100px;
   color: #fff;
 `;
 
 export const CategoryWrap = styled.div`
   margin-bottom: 30px;
+`;
+
+export const ContentWrap = styled.ul`
+  padding-left: 300px;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const ContentItem = styled.li`
+  width: 200px;
+`;
+
+export const ModalWrap = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  border: 2px solid #000;
+  z-index: 0;
+  padding: 100px 30px 30px;
 `;
 
 export const Header = styled.div`

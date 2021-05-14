@@ -12,6 +12,7 @@ export const NavBarWrap = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 `;
 
 export const Logo = styled.div`

@@ -1,10 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
-// import { Header, Footer, Main, Home, Questions } from 'components';
-// import { AuthPage, ContactsPage, UseFulPage } from 'views';
-import { Bar, NavBar, Ingredients } from 'components';
+import { NavBar } from 'components';
+import {
+  CocktailDetailsPage,
+  BarPage,
+  IngredientsPage,
+  IngredientsDetailsPage,
+} from 'views';
 import { Layout } from 'UI/Layout';
-import data from 'DATA/data.json';
-import ingredients from 'DATA/ingredients.json';
 
 function App() {
   return (
@@ -13,12 +15,13 @@ function App() {
 
       <Layout>
         <Switch>
-          <Route path="/" exact>
-            <Bar data={data} />
-          </Route>
-          <Route path="/ingredients">
-            <Ingredients ingredients={ingredients} />
-          </Route>
+          <Route path="/cocktail" exact component={BarPage} />
+          <Route path="/cocktail/:cocktailId" component={CocktailDetailsPage} />
+          <Route
+            path="/ingredients/:ingredientsId"
+            component={IngredientsDetailsPage}
+          />
+          <Route exact path="/ingredients" component={IngredientsPage} />
         </Switch>
       </Layout>
     </>
